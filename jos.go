@@ -8,7 +8,7 @@ func main() {
 	Joseph(3, 1500000)
 }
 
-//¶¨Òå½Úµã
+//å®šä¹‰èŠ‚ç‚¹
 type Node struct {
 	num  int
 	next *Node
@@ -17,7 +17,7 @@ type Node struct {
 var p, r, list *Node
 
 func Joseph(m, n int) {
-	//´´½¨Á´±í
+	//åˆ›å»ºé“¾è¡¨
 	for i := 1; i <= n; i++ {
 		p = &Node{num: 0, next: nil}
 		p.num = i
@@ -29,12 +29,12 @@ func Joseph(m, n int) {
 		r = p
 	}
 
-	p.next = list //Ê¹Á´±íÑ­»·
-	p = list      //pÖ¸ÏòÍ·½áµã
+	p.next = list //ä½¿é“¾è¡¨å¾ªçŽ¯
+	p = list      //pæŒ‡å‘å¤´ç»“ç‚¹
 	r = p
 
-	//Ñ­»·É¾³ý¶ÓÁÐÖÐµÄ½áµã£¬¼´³öÁÐ
-	fmt.Print("³öÁÐÕßÐòÁÐ£º")
+	//å¾ªçŽ¯åˆ é™¤é˜Ÿåˆ—ä¸­çš„ç»“ç‚¹ï¼Œå³å‡ºåˆ—
+	fmt.Print("å‡ºåˆ—è€…åºåˆ—ï¼š")
 	for p.next != p {
 		for i := 1; i < m; i++ {
 			r = p
@@ -43,8 +43,6 @@ func Joseph(m, n int) {
 		r.next = p.next
 		fmt.Printf("%d ", p.num)
 		p = r.next
-
 	}
-	fmt.Printf("\n×îºóÁôÏÂµÄÈËÊÇ£º%d\n", p.num)
+	fmt.Printf("\næœ€åŽç•™ä¸‹çš„äººæ˜¯ï¼š%d\n", p.num)
 }
-
