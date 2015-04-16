@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	Joseph(3, 1500000)
+	Joseph(3, 1000000)
 }
 
 //定义节点
